@@ -33,7 +33,12 @@ jobs:
       with:
         name: apk-file
         path: bin/*.apk
-EOFmkdir -p .github/workflows
+EOFcd /workspaces/license-manager
+
+# ایجاد پوشه workflows
+mkdir -p .github/workflows
+
+# ایجاد فایل workflow
 cat > .github/workflows/build-apk.yml << 'EOF'
 name: Build APK
 
